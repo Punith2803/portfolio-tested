@@ -35,7 +35,7 @@ const About = () => {
               <div className="detail-item">
                 <Calendar className="detail-icon" />
                 <div className="detail-content">
-                  <span className="detail-label">Mission Completion</span>
+                  <span className="detail-label">Graduation Year</span>
                   <span className="detail-value">{mockData.personal.graduationYear}</span>
                 </div>
               </div>
