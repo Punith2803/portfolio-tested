@@ -4,12 +4,12 @@ export const mockData = {
     name: "Punith N",
     title: "Electronics & Communication Engineering Graduate",
     subtitle: "IoT Enthusiast | Embedded Systems Developer | Web Application Developer",
-    bio: "Passionate Electronics and Communication Engineering graduate exploring the frontiers of IoT, Embedded Systems, and Web Application Development. Driven by curiosity and a desire to use technology to solve real-world problems.",
+    bio: "Electronics and Communication Engineering graduate (May 2025) exploring the frontiers of IoT, Embedded Systems, and Web Application Development. Driven by curiosity and a desire to use technology to solve real-world problems.",
     email: "Punithn2803@gmail.com",
     phone: "+91 7204030445",
     linkedin: "https://linkedin.com/in/punith-n-429386237",
     location: "Bengaluru, India",
-    graduationYear: "2024"
+    graduationYear: "May 2025"
   },
   
   experience: [
