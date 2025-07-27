@@ -161,7 +161,7 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Backend API testing completed"
+    - "Backend API testing completed and re-verified after deployment fix"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
