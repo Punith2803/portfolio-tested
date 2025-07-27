@@ -131,6 +131,9 @@ backend:
         - working: true
           agent: "testing"
           comment: "✅ TESTED: Status check creation working correctly. Successfully creates status check with UUID, client_name, and timestamp. Returns proper StatusCheck model response with status 200. MongoDB integration working."
+        - working: true
+          agent: "testing"
+          comment: "✅ RE-VERIFIED: After deployment fix with relative URLs, POST /api/status still working correctly. Successfully created status check with ID '17ec0039-4fca-4f46-bd66-cda47f6dcece', client_name 'TestClient_API_Check', and proper timestamp. MongoDB integration confirmed working."
 
   - task: "GET /api/status get all status checks"
     implemented: true
