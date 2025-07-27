@@ -146,6 +146,9 @@ backend:
         - working: true
           agent: "testing"
           comment: "✅ TESTED: Status check retrieval working correctly. Returns list of all status checks with proper structure (id, client_name, timestamp). MongoDB query and data serialization working properly."
+        - working: true
+          agent: "testing"
+          comment: "✅ RE-VERIFIED: After deployment fix with relative URLs, GET /api/status still working correctly. Retrieved 5 status checks with proper structure. MongoDB query and data serialization confirmed working properly."
 
 frontend:
   # No frontend testing performed as per instructions
