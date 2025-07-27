@@ -17,12 +17,16 @@ load_dotenv('/app/frontend/.env')
 # Get backend URL from environment
 BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL')
 if not BACKEND_URL:
-    # If REACT_APP_BACKEND_URL is empty (for relative URLs), use base_url from environment
-    BACKEND_URL = os.getenv('base_url')
-    if not BACKEND_URL:
-        print("❌ ERROR: Neither REACT_APP_BACKEND_URL nor base_url found in environment")
+    # If REACT_APP_BACKEND_URL is empty (for relative URLs), construct the preview URL
+    hostname = os.getenv('HOSTNAME', '')
+    if 'agent-env-' in hostname:
+        # Extract the UUID from hostname like 'agent-env-19aac99a-feb2-4ebe-9483-5a36a61d951e'
+        uuid_part = hostname.replace('agent-env-', '')
+        BACKEND_URL = f"https://{uuid_part}.preview.emergentagent.com"
+        print(f"ℹ️  Using constructed preview URL since REACT_APP_BACKEND_URL is empty (relative URL setup): {BACKEND_URL}")
+    else:
+        print("❌ ERROR: Cannot determine backend URL from environment")
         sys.exit(1)
-    print(f"ℹ️  Using base_url since REACT_APP_BACKEND_URL is empty (relative URL setup): {BACKEND_URL}")
 
 API_BASE_URL = f"{BACKEND_URL}/api"
 
