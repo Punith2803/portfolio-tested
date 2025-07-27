@@ -17,8 +17,12 @@ load_dotenv('/app/frontend/.env')
 # Get backend URL from environment
 BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL')
 if not BACKEND_URL:
-    print("❌ ERROR: REACT_APP_BACKEND_URL not found in environment")
-    sys.exit(1)
+    # If REACT_APP_BACKEND_URL is empty (for relative URLs), use base_url from environment
+    BACKEND_URL = os.getenv('base_url')
+    if not BACKEND_URL:
+        print("❌ ERROR: Neither REACT_APP_BACKEND_URL nor base_url found in environment")
+        sys.exit(1)
+    print(f"ℹ️  Using base_url since REACT_APP_BACKEND_URL is empty (relative URL setup): {BACKEND_URL}")
 
 API_BASE_URL = f"{BACKEND_URL}/api"
 
