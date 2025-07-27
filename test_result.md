@@ -116,6 +116,9 @@ backend:
         - working: true
           agent: "testing"
           comment: "✅ TESTED: Hello World endpoint working correctly. Returns {'message': 'Hello World'} with status 200. API accessible at https://19aac99a-feb2-4ebe-9483-5a36a61d951e.preview.emergentagent.com/api/"
+        - working: true
+          agent: "testing"
+          comment: "✅ RE-VERIFIED: After deployment fix with relative URLs (empty REACT_APP_BACKEND_URL), Hello World endpoint still working correctly. Updated backend_test.py to handle empty REACT_APP_BACKEND_URL by constructing preview URL from hostname. Status 200, proper response format confirmed."
 
   - task: "POST /api/status create status check with client_name"
     implemented: true
