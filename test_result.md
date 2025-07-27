@@ -160,3 +160,5 @@ test_plan:
 agent_communication:
     - agent: "testing"
       message: "Backend API testing completed successfully. All 3 endpoints (GET /api/, POST /api/status, GET /api/status) are working correctly. MongoDB integration is functional. Created backend_test.py for comprehensive API testing. No critical issues found."
+    - agent: "testing"
+      message: "✅ RE-VERIFIED: After deployment fix with relative URLs (empty REACT_APP_BACKEND_URL), all backend APIs still working correctly. Updated backend_test.py to handle empty REACT_APP_BACKEND_URL by constructing preview URL from hostname. All 3 endpoints tested and passing: GET /api/ (Hello World), POST /api/status (Create Status), GET /api/status (Get Status). MongoDB integration confirmed working. No issues found with the relative URL deployment fix."
